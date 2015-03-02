@@ -1,0 +1,440 @@
+/*use this css to define the rules for different devices. Do not modify these rules for correct site display on all devices.*/
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+
+	.container{width:960px;}
+	
+	/*start menu*/
+	.logo img{
+		width:140px;	
+	}
+	.leftnavigation li{
+		margin:0 15px;
+		border-top:0px;		
+	}
+	.rightnavigation li{
+		margin:0 15px;
+		border-top:0px;		
+	}
+	nav{
+		margin:25px 20px 20px;
+	}
+	/*end menu*/
+	
+	/*services*/
+	#services img{
+		margin:20px 0px 0px 100px;
+		float:none;	
+	}
+	#services p{
+		margin-bottom:20px;	
+	}
+	#services h2, #services p{
+		text-align:center;	
+	}
+	/*services*/
+	
+	/*portolio*/
+	.element{
+		width:298px !important;	
+		height:293px !important;
+	}
+	/*portfolio*/
+	
+	/*price*/
+	.logoprice, .ribbon{
+		width:220px;	
+	}
+	.ribbon span{
+		display:none;	
+	}
+	.price{
+		width:210px;	
+	}
+	.price ul li p{
+		width:150px;	
+	}
+	.triangle{
+		height:39px;
+		background-image:url(../img/section-prices/triangle220.png);
+	}
+	/*price*/
+	
+	/*team*/
+	.avatar, .socialteam, .avatar img{
+		width:220px;	
+	}
+	.team, .bordertopteam{
+		width:218px;	
+	}
+	.team h2{
+		margin:115px 20px 10px;	
+	}
+	.socialteam img{
+		margin-top:7px;
+		width:40px;	
+	}
+	.socialteam{
+		background-image:url("../img/section-team/imgbottomteam220.png");	
+	}
+	/*team*/
+	
+	/*skill*/
+	#operator{
+		display:none;	
+	}
+	#allprogresbar{
+		width:340px;	
+	}
+	.progresbar div{
+		width:290px;	
+	}
+	.skilldescription img{
+		display:none;	
+	}
+	/*skill*/
+	
+	/*social*/
+	#oursocial .grid_2 img{
+		width:100px;	
+	}
+	/*social*/
+
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	
+	.container {width:744px;}
+	
+	/*start menu*/
+	.logo img{
+		width:104px;
+		margin-top:20px;	
+	}
+	nav{
+		margin:25px 20px 20px;
+	}
+	nav ul li{
+		border-top:0px;
+	}
+	/*end menu*/
+	
+	/*services*/
+	#services img{
+		margin:20px 0px 0px 64px;
+		float:none;	
+	}
+	#services p{
+		margin-bottom:20px;	
+	}
+	#services h2, #services p{
+		text-align:center;	
+	}
+	/*services*/
+	
+	/*portfolio*/
+	.element{
+		width:350px !important;
+		height:327px !important;	
+	}
+	/*portfolio*/
+	
+	/*prices*/
+	#sectionprices .grid_3{
+		width:352px;	
+	}
+	.logoprice, .ribbon{
+		width:352px	
+	}
+	.price{
+		width:342px;	
+	}
+	.price ul li p{
+		width:282px;	
+	}
+	.triangle{
+		height:62px;
+		background-image:url(../img/section-prices/triangle352.png);
+	}
+	/*prices*/
+	
+	/*team*/
+	#sectionteam .grid_3, .socialteam{
+		width:352px;	
+	}
+	.team, .bordertopteam, .avatar{
+		width:350px;	
+	}
+	.socialteam{
+		background-image:url("../img/section-team/imgbottomteam352.png");	
+	}
+	/*team*/
+	
+	/*skill*/
+	#operator{
+		display:none;	
+	}
+	#allprogresbar{
+		width:312px;	
+	}
+	.progresbar div{
+		width:262px;	
+	}
+	.skilldescription img{
+		display:none;	
+	}
+	.skilldescription{
+		margin:10px 20px;	
+	}
+	#sectionskills .grid_5{
+		width:352px !important;	
+	}
+	.clip{
+		display:none;	
+	}
+	/*skill*/
+	
+	/*social*/
+	#oursocial .grid_2 img{
+		width:64px;	
+	}
+	/*social*/
+	
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body{
+		-webkit-text-size-adjust:none;
+	}		
+	
+	.container {width:460px;}
+	
+	/*start menu*/
+	.logo{
+		height:auto;
+		text-align:center;	
+	}
+	.logo img{
+		position:relative;
+	}
+	nav{
+		margin:25px 20px 20px;
+	}
+	nav ul li, nav, nav ul, nav a{
+		width:100%;
+		margin:0px;	
+	}
+	nav a{
+		padding:20px 0px;
+		text-align:center;	
+	}
+	nav ul li{
+		border-top:0px;	
+	}
+	/*end menu*/
+
+	/*testimonials*/
+	.lefttestimonials h2, .lefttestimonials p, .righttestimonials h2, .righttestimonials p{
+		text-align:center;	
+	}
+	#darkfilter{
+		background:none;	
+	}
+	.lefttestimonials{
+		border-bottom:1px solid #fff;	
+	}
+	.lefttestimonials p{
+		margin-bottom:40px !important;	
+	}
+	.righttestimonials h2{
+		margin-top:40px !important;	
+	}
+	/*testimonials*/
+	
+	/*portfolio*/
+	.element{
+		width:438px !important;
+		height:385px !important;	
+	}
+	/*portfolio*/
+	
+	/*skill*/
+	.skilldescription{
+		text-align:center;
+	}
+	.skilldescription img{
+		float:none;
+		margin-bottom:10px;	
+	}
+	#operator{
+		display:none;	
+	}
+	.clip{
+		display:none;	
+	}
+	#allprogresbar{
+		width:400px;	
+	}
+	.progresbar div{
+		width:350px;	
+	}
+	/*skill*/
+	
+	/*price*/
+	.logoprice, .ribbon{
+		width:440px;	
+	}
+	.price{
+		width:430px;	
+	}
+	.price ul li p{
+		width:370px;	
+	}
+	.triangle{
+	height:78px;
+	background-image:url(../img/section-prices/triangle440.png);
+	}
+	/*price*/
+	
+	/*team*/
+	.socialteam{
+		width:440px;	
+	}
+	.team, .bordertopteam, .avatar{
+		width:438px;	
+	}
+	.socialteam{
+		background-image:url("../img/section-team/imgbottomteam440.png");	
+	}
+	/*team*/
+
+	/*social*/
+	#oursocial{
+		text-align:center;	
+	}
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 479px){
+    
+	body{
+		-webkit-text-size-adjust:none;
+	}
+	
+	.container{
+		width:300px;	
+	}
+	
+	/*start menu*/
+	.logo{
+		height:auto;
+		text-align:center;	
+	}
+	.logo img{
+		position:relative;
+	}
+	nav{
+		margin:25px 20px 20px;
+	}
+	nav ul li, nav, nav ul, nav a{
+		width:100%;
+		margin:0px;	
+	}
+	nav a{
+		padding:20px 0px;
+		text-align:center;	
+	}
+	nav ul li{
+		border-top:0px;	
+	}
+	/*end menu*/
+	
+	/*services*/
+	#services img{
+		margin:20px 0px 0px 90px;
+		float:none;	
+	}
+	#services p{
+		margin-bottom:20px;	
+	}
+	#services h2, #services p{
+		text-align:center;	
+	}
+	/*services*/
+	
+	/*testimonials*/
+	.lefttestimonials h2, .lefttestimonials p, .righttestimonials h2, .righttestimonials p{
+		text-align:center;	
+	}
+	#darkfilter{
+		background:none;	
+	}
+	.lefttestimonials{
+		border-bottom:1px solid #fff;	
+	}
+	.lefttestimonials p{
+		margin-bottom:40px !important;	
+	}
+	.righttestimonials h2{
+		margin-top:40px !important;	
+	}
+	/*testimonials*/
+	
+	/*portfolio*/
+	.element{
+		width:280px !important;
+		height:281px !important;	
+	}
+	/*portfolio*/
+	
+	/*skill*/
+	#operator{
+		display:none;	
+	}
+	.clip{
+		display:none;	
+	}
+	#allprogresbar{
+		width:240px;	
+	}
+	.progresbar div{
+		width:190px;	
+	}
+	.skilldescription{
+		text-align:center;
+	}
+	.skilldescription img{
+		float:none;
+		margin:0px 0px 10px 0px;
+	}
+	/*skill*/
+	
+	/*social*/
+	#oursocial{
+		text-align:center;	
+	}
+	/*social*/
+	
+	/*contact*/
+	#markers{
+		width:320px;
+		height:557px;
+		position:absolute;
+		z-index:1;
+		left:50%;
+		margin-left:-160px;
+		margin-top:116px;	
+	}
+	#bigmarker{
+		width:220px;
+		background-image:url(../img/section-contact/bigmarkermobile.png);
+		padding:50px;
+		background-repeat:no-repeat;		
+	}
+	/*contact*/
+		
+}
