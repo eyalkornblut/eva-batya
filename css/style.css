@@ -437,13 +437,15 @@ nav a:hover{
 .price ul li p{
 	padding:5px 0px 5px 20px;
 	margin:0px;
-	text-align:left;
+	text-align:right;
 	width:210px;
 	border-bottom:1px solid #d4d7d3;
 	color:#908f8f;
 	background-image:url(../img/section-prices/star.png);
 	background-repeat:no-repeat;
-	background-position:0px 12px;
+	background-position: 100% 12px;
+  	padding-right: 15px;
+  	padding-left: 10px;
 }
 .logoprice{
 	position:absolute;
