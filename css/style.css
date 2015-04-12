@@ -281,7 +281,7 @@ nav a:hover{
 #sectionportfolio{
 	width:100%;
 	float:left;
-	background-image:url(../img/patterns/green-bg.png);
+	background-image:url(../img/patterns/image-bg.png);
 	background-repeat:repeat;
 	background-attachment:fixed;
 	overflow:hidden;		
@@ -502,6 +502,7 @@ nav a:hover{
 	border-left:1px solid #e8e8e8;
 	border-right:1px solid #e8e8e8;
 	width:278px;
+	height:270px;
 	margin:145px 0px 0px 0px;
 	float:left;
 }

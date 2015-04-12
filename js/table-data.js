@@ -22,6 +22,8 @@ jQuery(function($){
     var filterColors = ["orange", "blue", "yellow", "navi", "green"];
     var lastAddedFilterColorIndex = 0;
 
+    var filterIconDictionary = {};
+
     // Functions
     function init() 
     {
@@ -68,6 +70,11 @@ jQuery(function($){
       filtersElement.append(getFilterElementByItem(item, lastAddedFilterColorIndex));
       lastAddedFilterColorIndex++;
       if (lastAddedFilterColorIndex == filterColors.length) lastAddedFilterColorIndex = 0;
+
+      if (item[COL_IMAGE_BIG].length > 0)
+      {
+        filterIconDictionary[item[COL_LEEDS_TO]] = item[COL_IMAGE_BIG];
+      }
     }
 
     function addProduct(item) 
@@ -82,9 +89,15 @@ jQuery(function($){
 
     function getProductElementByItem(item)
     {
-      var product = "<div class='element " + getProductCategories(item) + "' data-category='blue'>";
+      var productCategories = getProductCategories(item);
 
-      if (item[COL_LEEDS_TO].length > 0)
+      var product = 
+      "<div class='element " + productCategories.join(' ') + "' data-category='blue'>" + 
+      " <div class='element-internal'>";
+
+      var isCategory = (item[COL_LEEDS_TO].length > 0);
+
+      if (isCategory)
       {
         product += 
         "    <a class='leeds-to-link' data-option-value='." + item[COL_LEEDS_TO] + "'>" +
@@ -104,23 +117,48 @@ jQuery(function($){
       "        <img alt='' src='img/section-works/arrow.png' />" +
       "    </div>" +
       "    <h2>" + item[COL_NAME] + "</h2>" +
-      "    <p>" + item[COL_DESCRIPTION] + "</p>" +
-      "    <div class='worksbottom'></div>" +
-      "</div>";
+      "    <p>" + item[COL_DESCRIPTION] + "</p>";      
+
+      if (isCategory)
+      {
+        product += 
+        "    <div class='worksbottom'></div>" + 
+        " </div>" + 
+        "</div>";
+      }
+      else
+      {
+        product += 
+        " </div>" + 
+        " <div class='product-links'>";
+
+        var index;
+        for (index = 0; index < productCategories.length; ++index) 
+        {
+          var category = productCategories[index];
+          if (!(category in filterIconDictionary)) continue;
+
+          product += 
+          "     <a href='#'><img class='rotate' alt='' src='" + filterIconDictionary[category] + "' /></a>";
+        }
+
+        product += 
+        " </div>" + 
+        "</div>";
+      }
 
       return product;
     }
 
     function getProductCategories(item)
     {
-      var categories = "";
+      var categories = [];
       for (var key in item)
       {
         if (!key.startsWith("cat_")) continue; 
         if (item[key] != 1) continue;
 
-        if (categories.length > 0) categories += " ";
-        categories += key;
+        categories.push(key);
       }
       return categories;
     }
