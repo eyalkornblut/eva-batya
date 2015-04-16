@@ -84,6 +84,15 @@ jQuery(function($){
 
     function getFilterElementByItem(item, colorIndex)
     {
+      // var filterClass = filterColors[colorIndex];
+      // var filterContent = item[COL_NAME];
+      // if (item[COL_IMAGE_BIG].length > 0)
+      // {
+        // filterClass = '';
+        // filterContent = "<img class='rotate' alt='' src='" + item[COL_IMAGE_BIG] + "' />";
+      // }
+      // return "<li class=" + filterClass + "><a href='#filter' data-option-value=" + "." + item[COL_LEEDS_TO] + ">" + filterContent + "</a></li>";
+      
       return "<li class=" + filterColors[colorIndex] + "><a href='#filter' data-option-value=" + "." + item[COL_LEEDS_TO] + ">" + item[COL_NAME] + "</a></li>";
     }
 
