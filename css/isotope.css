@@ -68,7 +68,7 @@
 
 .element {
   width: 278px;
-  height:310px;
+  height:300px;
   /*overflow: hidden;*/
   margin: 10px;
   float: none;
@@ -78,7 +78,7 @@
   display:block;
 }
 .element .element-internal {
-  height:295px;
+  height:290px;
   overflow: hidden;
   background-color:#f5f5f5;
   border:1px solid #ededed;
@@ -93,7 +93,7 @@
   margin:5px 0px;
 }
 .element .product-links{
-  margin-top: -30px;
+  margin-top: -22px;
   text-align: center;
 }
 
