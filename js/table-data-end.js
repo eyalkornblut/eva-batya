@@ -79,32 +79,21 @@ jQuery(function($){
 
     function addFunctionalityToFilterSelection() 
     {
-    	// $("#filters li a").get().each(function() {alert("fdfdfd")});
-
-    	// var filterLinks = $("#filters li a").get();
     	var filterLinks = $("a.leeds-to-link").get();
-    	// console.log(filterLinks);
-    	// for (var filterLink in filterLinks)
-    	// {
-    	// 	filterLink.addEventListener("click", function(){alert("sssss");});
-    	// }
+    	var filterDescription = $(".filter-description h2").get()[0];
 
     	for (var i = 0; i < filterLinks.length; i++) 
     	{
     		(function()
     		{
     			var link = filterLinks[i];
-    			link.addEventListener("click", function(){console.log(link)});
-    			// console.log(filterLinks[i]);
+    			link.addEventListener("click", function()
+    			{
+    				filterDescription.innerHTML = $(link).attr('data-option-label');
+    			});
     		}())
 		}
-    	// console.log(filterLinks);
     };
-
-    function aaa()
-    {
-    	console.log("aaaaaaaa");
-    }
 
 	//init
 	SWEET.gallery();
