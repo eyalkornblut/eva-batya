@@ -23,6 +23,7 @@ jQuery(function($){
     var lastAddedFilterColorIndex = 0;
 
     var filterIconDictionary = {};
+    var filterDescriptionDictionary = {};
 
     // Functions
     function init() 
@@ -74,6 +75,11 @@ jQuery(function($){
       if (item[COL_IMAGE_BIG].length > 0)
       {
         filterIconDictionary[item[COL_LEEDS_TO]] = item[COL_IMAGE_BIG];
+      }
+      var description = getProductBigDescription();
+      if (description.length > 0)
+      {
+        filterDescriptionDictionary[item[COL_LEEDS_TO]] = description;
       }
     }
 
@@ -147,8 +153,14 @@ jQuery(function($){
           var category = productCategories[index];
           if (!(category in filterIconDictionary)) continue;
 
+          var categoryDescription = '';
+          if (category in filterDescriptionDictionary)
+          {
+            categoryDescription = filterDescriptionDictionary[category];
+          }
+
           product += 
-          "     <a href='#'><img class='rotate' alt='' src='" + filterIconDictionary[category] + "' /></a>";
+          "     <a href='#' data-option-label=" + categoryDescription + "><img class='rotate' alt='' src='" + filterIconDictionary[category] + "' /></a>";
         }
 
         product += 
