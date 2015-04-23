@@ -76,7 +76,7 @@ jQuery(function($){
       {
         filterIconDictionary[item[COL_LEEDS_TO]] = item[COL_IMAGE_BIG];
       }
-      var description = getProductBigDescription();
+      var description = getProductBigDescription(item);
       if (description.length > 0)
       {
         filterDescriptionDictionary[item[COL_LEEDS_TO]] = description;
@@ -99,7 +99,7 @@ jQuery(function($){
       // }
       // return "<li class=" + filterClass + "><a href='#filter' data-option-value=" + "." + item[COL_LEEDS_TO] + ">" + filterContent + "</a></li>";
       
-      return "<li class=" + filterColors[colorIndex] + "><a href='#filter' data-option-value=" + "." + item[COL_LEEDS_TO] + ">" + item[COL_NAME] + "</a></li>";
+      return "<li class=" + filterColors[colorIndex] + "><a class='leeds-to-link' href='#filter' data-option-value=" + "." + item[COL_LEEDS_TO] + " data-option-label='" + getProductBigDescription(item) + "'>" + item[COL_NAME] + "</a></li>";
     }
 
     function getProductElementByItem(item)
@@ -115,7 +115,7 @@ jQuery(function($){
       if (isCategory)
       {
         product += 
-        "    <a class='leeds-to-link' data-option-value='." + item[COL_LEEDS_TO] + "'>" +
+        "    <a class='leeds-to-link' data-option-value='." + item[COL_LEEDS_TO] + "' data-option-label='" + getProductBigDescription(item) + "'>" +
         "        <img alt='' class='imgwork' src='" + getProductImagePath(item) + "' />" +
         "    </a>";                  
       }
@@ -146,6 +146,7 @@ jQuery(function($){
         product += 
         " </div>" + 
         " <div class='product-links'>";
+        // " <div class='product-links contanchors'>";
 
         var index;
         for (index = 0; index < productCategories.length; ++index) 
@@ -160,7 +161,7 @@ jQuery(function($){
           }
 
           product += 
-          "     <a href='#' data-option-label=" + categoryDescription + "><img class='rotate' alt='' src='" + filterIconDictionary[category] + "' /></a>";
+          "     <a class='leeds-to-link' href='#' data-option-value='." + category + "' data-option-label='" + categoryDescription + "'><img class='rotate' alt='' src='" + filterIconDictionary[category] + "' /></a>";
         }
 
         product += 
@@ -204,8 +205,13 @@ jQuery(function($){
 
     function enableCategoryAsProduct() 
     {
-      var $categoryLink = $('a.leeds-to-link');
-      $categoryLink.click(function(){
+      var $categoryLink = $('.products a.leeds-to-link');
+      $categoryLink.click(function()
+      {
+        var target_offset = $("#filters").offset();
+        var target_top = target_offset.top;
+        $('html,body').animate({scrollTop:target_top -13}, 900);
+
         var value = $(this).attr('data-option-value')
         $("a[data-option-value='" + value + "']").first().click();
       });

@@ -77,11 +77,41 @@ jQuery(function($){
       $("#filters li a").first().click();
     };
 
+    function addFunctionalityToFilterSelection() 
+    {
+    	// $("#filters li a").get().each(function() {alert("fdfdfd")});
+
+    	// var filterLinks = $("#filters li a").get();
+    	var filterLinks = $("a.leeds-to-link").get();
+    	// console.log(filterLinks);
+    	// for (var filterLink in filterLinks)
+    	// {
+    	// 	filterLink.addEventListener("click", function(){alert("sssss");});
+    	// }
+
+    	for (var i = 0; i < filterLinks.length; i++) 
+    	{
+    		(function()
+    		{
+    			var link = filterLinks[i];
+    			link.addEventListener("click", function(){console.log(link)});
+    			// console.log(filterLinks[i]);
+    		}())
+		}
+    	// console.log(filterLinks);
+    };
+
+    function aaa()
+    {
+    	console.log("aaaaaaaa");
+    }
+
 	//init
 	SWEET.gallery();
 	SWEET.prettyphoto();
 	//end init
 
 	forceFirstFilterSelection();
+	addFunctionalityToFilterSelection();
 
 });
