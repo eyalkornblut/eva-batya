@@ -294,7 +294,21 @@ nav a:hover{
 #sectionportfolio .titlesection h1{
 	color:#FFF;
 }
+#sectionportfolio .titlesection h2{
+  color: #FFF;
+  text-shadow: 1px 1px 0 rgba(111, 176, 167, 0.9);
+  text-align: center;
+  margin-top: -40px;
+  margin-bottom: 30px;
+}
 
+.filter-description h2{
+  color: #FFF;
+  text-shadow: 1px 1px 0 rgba(111, 176, 167, 0.9);
+  text-align: right;
+  /*margin-top: -40px;*/
+  /*margin-bottom: 30px;*/
+}
 
 #options{
 	margin:10px 0px;
@@ -340,7 +354,9 @@ nav a:hover{
 }
 .selected{
 	background-color:#e0a6a5 !important;
-	border-bottom:2px solid #bb7374 !important;
+	border:2px solid #bb7374 !important;
+	padding: 10px !important;
+  	font-weight: bold !important;
 }
 .worksarrow{
 	float:left;
