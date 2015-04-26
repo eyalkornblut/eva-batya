@@ -208,10 +208,6 @@ jQuery(function($){
       var $categoryLink = $('.products a.leeds-to-link');
       $categoryLink.click(function()
       {
-        var target_offset = $("#filters").offset();
-        var target_top = target_offset.top;
-        $('html,body').animate({scrollTop:target_top -13}, 900);
-
         var value = $(this).attr('data-option-value')
         $("a[data-option-value='" + value + "']").first().click();
       });

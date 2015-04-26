@@ -90,6 +90,11 @@ jQuery(function($){
     			link.addEventListener("click", function()
     			{
     				filterDescription.innerHTML = $(link).attr('data-option-label');
+
+			        var target_offset = $("#filters").offset();
+			        var target_top = target_offset.top;
+			        $('html,body').animate({scrollTop:target_top -13}, 900);
+
     			});
     		}())
 		}
@@ -102,5 +107,21 @@ jQuery(function($){
 
 	forceFirstFilterSelection();
 	addFunctionalityToFilterSelection();
+
+
+	$(window).scroll(function(e){ 
+	  	$el = $('.side-menu');
+	  	var current_scroll = $(this).scrollTop();
+	  	var portfolio_top = $("#sectionportfolio").offset().top;
+	  	var portfolio_bottom = $("#sectionteam").offset().top - 140;
+
+	  	if (current_scroll > portfolio_top && current_scroll < portfolio_bottom && $el.css('position') != 'fixed'){ 
+	    	$('.side-menu').css({'position': 'fixed'}); 
+	  	}
+	  	if ((current_scroll < portfolio_top || current_scroll > portfolio_bottom) && $el.css('position') == 'fixed')
+	  	{
+	    	$('.side-menu').css({'position': 'static'}); 
+	  	} 
+	});
 
 });
