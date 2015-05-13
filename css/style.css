@@ -1,10 +1,18 @@
 /*this is the main css of the entire site, the rules are divided into sections. For example, to change the services section, changes only the rules of this section at line 190*/
 
+/*@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);*/
+
 body{
 	margin:0px;
 	padding:0px;
 	color:#888888;
 	direction: rtl;
+/*	font-family: 'Alef Hebrew',
+	       'Helvetica Neue',
+	       Helvetica,
+	       Arial,
+	       sans-serif;
+*/
 }
 
 /*font face*/
