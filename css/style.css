@@ -167,6 +167,15 @@ nav a:hover{
 .rightnavigation li, .leftnavigation li{
 	float:right;
 }
+.kosher{
+  	position: absolute;
+	top: 30px;
+  	left: 30px;
+}
+.kosher img{
+	width: 82px;
+	height: 82px;
+}
 /*end navigationmenu*/
 
 
@@ -778,7 +787,7 @@ nav a:hover{
 	font-size:12px;
 	color:#a9a9a9;
 	border-bottom:1px solid #e5e5e5;
-	text-align:left;
+	text-align:right;
 	background-repeat:no-repeat;
 }
 #bigmarker a{

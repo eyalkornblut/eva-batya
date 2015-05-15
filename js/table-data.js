@@ -13,7 +13,7 @@ jQuery(function($){
     var COL_PRODUCT         = "Product";
     var COL_LEEDS_TO        = "LeedsTo";
 
-    var DEFAULT_IMAGE_PATH = "img/section-works/template.jpg";
+    var DEFAULT_IMAGE_PATH = "img/section-works/template.png";
 
     // Members
     var filtersElement = $("#sectionportfolio #filters");
