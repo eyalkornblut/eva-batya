@@ -440,8 +440,10 @@ nav a:hover{
   	/*position: fixed;*/
   	top: 10%;
   	left: -33px;
-  	transform: rotate(270deg);
   	z-index: 101;
+  	transform: rotate(270deg);
+  	-ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
 }
 .side-menu div{
 	display: inline-block;
