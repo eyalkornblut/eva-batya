@@ -169,12 +169,12 @@ nav a:hover{
 }
 .kosher{
   	position: absolute;
-	top: 30px;
-  	left: 30px;
+	top: 20px;
+  	left: 20px;
 }
 .kosher img{
-	width: 82px;
-	height: 82px;
+	width: 64px;
+	height: 64px;
 }
 /*end navigationmenu*/
 
@@ -370,8 +370,9 @@ nav a:hover{
 	-moz-transition-duration: 250ms;
 }
 .selected{
-	background-color:#e0a6a5 !important;
-	border:2px solid #bb7374 !important;
+	color:black !important;
+	background-color:lightsteelblue !important;
+	border:2px solid lightslategray !important;
 	padding: 10px !important;
   	font-weight: bold !important;
 }
@@ -762,9 +763,9 @@ nav a:hover{
 
 #bigmarker h2{
 	float:left;
-	margin-bottom:10px;
-	padding-bottom:20px;
-	background-image:url(../img/section-contact/h2arrow.png);
+	/*margin-bottom:10px;*/
+	/*padding-bottom:20px;*/
+	/*background-image:url(../img/section-contact/h2arrow.png);*/
 	background-repeat:no-repeat;
 	background-position:center bottom;
 	width:100%;	
@@ -784,7 +785,7 @@ nav a:hover{
 #bigmarker ul li p{
 	margin:0px;
 	padding:10px 20px 10px 50px;
-	font-size:12px;
+	font-size:14px;
 	color:#a9a9a9;
 	border-bottom:1px solid #e5e5e5;
 	text-align:right;

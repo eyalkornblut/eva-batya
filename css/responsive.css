@@ -37,7 +37,10 @@
 	/*portolio*/
 	.element{
 		width:298px !important;	
-		height:293px !important;
+		height:310px !important;
+	}
+	.element .element-internal{
+		height:300px !important;
 	}
 	/*portfolio*/
 	
@@ -103,7 +106,6 @@
 }
 
 
-
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	
 	.container {width:744px;}
@@ -137,7 +139,10 @@
 	/*portfolio*/
 	.element{
 		width:350px !important;
-		height:327px !important;	
+		height:340px !important;	
+	}
+	.element .element-internal{
+		height:333px !important;	
 	}
 	/*portfolio*/
 	
@@ -244,21 +249,27 @@
 	#darkfilter{
 		background:none;	
 	}
-	.lefttestimonials{
+	.righttestimonials{
 		border-bottom:1px solid #fff;	
 	}
-	.lefttestimonials p{
+	.righttestimonials p{
 		margin-bottom:40px !important;	
 	}
-	.righttestimonials h2{
+	.lefttestimonials h2{
 		margin-top:40px !important;	
+	}
+	.lefttestimonials h2, .righttestimonials h2{
+		float: none !important;	
 	}
 	/*testimonials*/
 	
 	/*portfolio*/
 	.element{
 		width:438px !important;
-		height:385px !important;	
+		height:400px !important;	
+	}
+	.element .element-internal{
+		height:390px !important;	
 	}
 	/*portfolio*/
 	
@@ -373,21 +384,24 @@
 	#darkfilter{
 		background:none;	
 	}
-	.lefttestimonials{
+	.righttestimonials{
 		border-bottom:1px solid #fff;	
 	}
-	.lefttestimonials p{
+	.righttestimonials p{
 		margin-bottom:40px !important;	
 	}
-	.righttestimonials h2{
+	.lefttestimonials h2{
 		margin-top:40px !important;	
+	}
+	.lefttestimonials h2, .righttestimonials h2{
+		float:none; !important;	
 	}
 	/*testimonials*/
 	
 	/*portfolio*/
 	.element{
 		width:280px !important;
-		height:281px !important;	
+		height:300px !important;	
 	}
 	/*portfolio*/
 	
