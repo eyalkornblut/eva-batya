@@ -9,7 +9,7 @@ jQuery(function($){
   ga('send', 'pageview');
 
 
-  ga('send', 'event', 'button', 'click', 'nav buttons', 4);
+  // ga('send', 'event', 'button', 'click', 'nav buttons', 4);
   
 });
 
