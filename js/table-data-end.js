@@ -98,13 +98,13 @@ jQuery(function($){
 
 			        var data_option_value = $(link).attr('data-option-value');
 			        console.log(data_option_value);
-		            if (typeof ga !== 'undefined') 
+		            if (typeof _gaq !== 'undefined') 
 		            {
-		            	ga.push(["_trackEvent", "Links", "Clicked", data_option_value, , false]); // create a custom event
+		            	_gaq.push(["_trackEvent", "Links", "Clicked", data_option_value, , false]); // create a custom event
 					}
 					else
 					{
-			        	console.log("ga not exists");
+			        	console.log("_gaq not exists");
 					}
 
 
