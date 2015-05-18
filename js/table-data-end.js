@@ -100,7 +100,7 @@ jQuery(function($){
 			        console.log(data_option_value);
 		            if (typeof _gaq !== 'undefined') 
 		            {
-		            	_gaq.push(["_trackEvent", "Links", "Clicked", data_option_value, , false]); // create a custom event
+		            	_gaq.push(["_trackEvent", "Links", "Clicked", data_option_value, , false]);
 					}
 					else
 					{
