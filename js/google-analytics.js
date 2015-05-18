@@ -7,6 +7,9 @@ jQuery(function($){
 
   ga('create', 'UA-63082890-1', 'auto');
   ga('send', 'pageview');
+
+
+  ga('send', 'event', 'button', 'click', 'nav buttons', 4);
   
 });
 

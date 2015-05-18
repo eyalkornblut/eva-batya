@@ -95,6 +95,11 @@ jQuery(function($){
 			        var target_top = target_offset.top;
 			        $('html,body').animate({scrollTop:target_top -13}, 900);
 
+
+			        var data_option_value = $(link).attr('data-option-value');
+			        console.log(data_option_value);
+					ga('send', 'event', 'button', 'click', 'data_option_value', 1);
+
     			});
     		}())
 		}
