@@ -8,9 +8,8 @@ jQuery(function($){
   ga('create', 'UA-63082890-1', 'auto');
   ga('send', 'pageview');
 
-
-  ga('send', 'event', 'button', 'click', 'nav buttons', 0);
+  // Send custom events
+  // https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+  // ga('send', 'event', 'button', 'click', 'nav buttons', 0);
 
 });
-
-// Add events http://www.lunametrics.com/blog/2013/07/02/jquery-event-tracking-generator-google-analytics/
