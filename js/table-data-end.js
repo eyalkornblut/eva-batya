@@ -105,7 +105,7 @@ jQuery(function($){
 					else
 					{
 			        	console.log("_gaq not exists");
-			        	var _gaq = _gaq || [];
+			        	_gaq = _gaq || [];
 					}
 
 
