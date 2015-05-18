@@ -95,25 +95,6 @@ jQuery(function($){
 			        var target_top = target_offset.top;
 			        $('html,body').animate({scrollTop:target_top -13}, 900);
 
-
-			        var data_option_value = $(link).attr('data-option-value');
-			        console.log(data_option_value);
-		            if (typeof _gaq !== 'undefined') 
-		            {
-		            	_gaq.push(["_trackEvent", "Links", "Clicked", data_option_value, , false]);
-					}
-					else
-					{
-			        	console.log("_gaq not exists");
-			        	_gaq = [];
-			        	_gaq.push(['_setAccount', 'UA-63082890-1']);
- 						_gaq.push(['_trackPageview']);
-
-  						_gaq.push(["_trackEvent", "Links", "Clicked", "Dummy", , false]);
-
-					}
-
-
     			});
     		}())
 		}
