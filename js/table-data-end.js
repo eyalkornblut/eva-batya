@@ -105,7 +105,12 @@ jQuery(function($){
 					else
 					{
 			        	console.log("_gaq not exists");
-			        	_gaq = _gaq || [];
+			        	_gaq = [];
+			        	_gaq.push(['_setAccount', 'UA-63082890-1']);
+ 						_gaq.push(['_trackPageview']);
+
+  						_gaq.push(["_trackEvent", "Links", "Clicked", "Dummy", , false]);
+
 					}
 
 

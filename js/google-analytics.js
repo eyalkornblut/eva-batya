@@ -1,14 +1,3 @@
-// $(document).ready(function() {
-
-//   $("a.leeds-to-link").each(function() {
-//     var text = $(this).text();
-//     $(this).click(function(event) { // when someone clicks these links
-//       _gaq.push(["_trackEvent", "Links", "Clicked", "", , false]); // create a custom event
-//     });
-//   });
-
-// });
-
 jQuery(function($){
 
 
@@ -33,6 +22,17 @@ jQuery(function($){
 
 });
 
+
+// $(document).ready(function() {
+
+//   $("a.leeds-to-link").each(function() {
+//     var text = $(this).text();
+//     $(this).click(function(event) { // when someone clicks these links
+//       _gaq.push(["_trackEvent", "Links", "Clicked", "", , false]); // create a custom event
+//     });
+//   });
+
+// });
 
 
 
