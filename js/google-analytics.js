@@ -9,8 +9,8 @@ jQuery(function($){
   ga('send', 'pageview');
 
 
-  // ga('send', 'event', 'button', 'click', 'nav buttons', 4);
-  
+  ga('send', 'event', 'button', 'click', 'nav buttons', 0);
+
 });
 
 // Add events http://www.lunametrics.com/blog/2013/07/02/jquery-event-tracking-generator-google-analytics/

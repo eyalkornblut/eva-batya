@@ -97,8 +97,8 @@ jQuery(function($){
 
 
 			        var data_option_value = $(link).attr('data-option-value');
-			        // console.log(data_option_value);
-					ga('send', 'event', 'link', 'click', data_option_value, 1);
+			        console.log(data_option_value);
+					ga('send', 'event', 'button', 'click', data_option_value, 1);
 
     			});
     		}())
