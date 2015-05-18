@@ -13,7 +13,8 @@ jQuery(function($){
     var COL_PRODUCT         = "Product";
     var COL_LEEDS_TO        = "LeedsTo";
 
-    var DEFAULT_IMAGE_PATH = "img/section-works/template.png";
+    var DEFAULT_IMAGE_PATH_1 = "img/section-works/templates/template-1.png";
+    var DEFAULT_IMAGE_PATH_2 = "img/section-works/templates/template-2.png";
 
     // Members
     var filtersElement = $("#sectionportfolio #filters");
@@ -24,6 +25,9 @@ jQuery(function($){
 
     var filterIconDictionary = {};
     var filterDescriptionDictionary = {};
+
+    var lastUsedDefaultImage = "";
+    var lastUsedDefaultImageItemName = "";
 
     // Functions
     function init() 
@@ -188,7 +192,22 @@ jQuery(function($){
     function getProductImagePath(item)
     {
       if (item[COL_IMAGE].length > 0) return item[COL_IMAGE];
-      return DEFAULT_IMAGE_PATH;
+
+      // console.log("1 - " + lastUsedDefaultImage);
+
+      // if (lastUsedDefaultImage == DEFAULT_IMAGE_PATH_1) lastUsedDefaultImage = DEFAULT_IMAGE_PATH_2;
+      // else lastUsedDefaultImage = DEFAULT_IMAGE_PATH_1;
+
+      if (lastUsedDefaultImageItemName != item[COL_NAME])
+      {
+        lastUsedDefaultImage = (lastUsedDefaultImage == DEFAULT_IMAGE_PATH_1 ? DEFAULT_IMAGE_PATH_2 : DEFAULT_IMAGE_PATH_1);  
+      }
+      lastUsedDefaultImageItemName = item[COL_NAME];
+      
+
+      // console.log("2 - " + lastUsedDefaultImage);
+
+      return lastUsedDefaultImage;
     }
 
     function getProductBigImagePath(item)
