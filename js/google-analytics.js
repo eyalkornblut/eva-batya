@@ -1,3 +1,14 @@
+// $(document).ready(function() {
+
+//   $("a.leeds-to-link").each(function() {
+//     var text = $(this).text();
+//     $(this).click(function(event) { // when someone clicks these links
+//       _gaq.push(["_trackEvent", "Links", "Clicked", "", , false]); // create a custom event
+//     });
+//   });
+
+// });
+
 jQuery(function($){
 
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -7,21 +18,8 @@ jQuery(function($){
 
   ga('create', 'UA-63082890-1', 'auto');
   ga('send', 'pageview');
-
-
-  $(document).ready(function() {
-
-    $("a.leeds-to-link").each(function() {
-      var text = $(this).text();
-      $(this).click(function(event) { // when someone clicks these links
-        _gaq.push(["_trackEvent", "Links", "Clicked", "", , false]); // create a custom event
-      });
-    });
-
-  });
-
-
 });
+
 
 
 
