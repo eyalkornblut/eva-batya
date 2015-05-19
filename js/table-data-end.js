@@ -95,7 +95,6 @@ jQuery(function($){
 			        var target_top = target_offset.top;
 			        $('html,body').animate({scrollTop:target_top -13}, 900);
 
-
 			        var data_option_value = $(link).attr('data-option-value');
 					ga('send', 'event', 'Navigation', 'Product Category', data_option_value, 1);
 
