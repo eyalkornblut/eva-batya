@@ -19,6 +19,8 @@ jQuery(function($){
     // Members
     var filtersElement = $("#sectionportfolio #filters");
     var productsElement = $("#sectionportfolio .products");
+    var ordersElement = $("#sectionorder .products");
+    var ordersContainer = $("#sectionorder");
 
     var filterColors = ["orange", "blue", "yellow", "navi", "green"];
     var lastAddedFilterColorIndex = 0;
@@ -52,17 +54,23 @@ jQuery(function($){
 
     function showInfo(data, tabletop) 
     {
+      var urlParams = queryURLParams();
+
       for(var itemIndex = 0; itemIndex < data.length ; ++itemIndex) 
       {
         var item = data[itemIndex];
-        if (item[COL_AVAILABLE] != 1) continue;
-        if (item[COL_TOP_FILTER] == 1)
+        
+        if (item[COL_AVAILABLE] == 1 && item[COL_TOP_FILTER] == 1)
         {
           addTopFilter(item);
         }
-        if (item[COL_PRODUCT] == 1)
+        if (item[COL_AVAILABLE] == 1 && item[COL_PRODUCT] == 1)
         {
           addProduct(item);
+        }
+        if (urlParams.order != "undefined" && item[urlParams.order] == 1 && item[COL_PRODUCT] == 1)
+        {
+          addOrderItem(item);
         }
       }
 
@@ -90,6 +98,12 @@ jQuery(function($){
     function addProduct(item) 
     {
       productsElement.append(getProductElementByItem(item));
+    }
+
+    function addOrderItem(item) 
+    {
+      ordersContainer.removeClass("hidden");
+      ordersElement.append(getProductElementByItem(item));
     }
 
     function getFilterElementByItem(item, colorIndex)
@@ -241,6 +255,28 @@ jQuery(function($){
 
       loadScript("js/table-data-end.js", loadScriptCallback);
     }
+
+    function queryURLParams()
+    {
+      var query_string = {};
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+            // If first entry with this name
+        if (typeof query_string[pair[0]] === "undefined") {
+          query_string[pair[0]] = decodeURIComponent(pair[1]);
+            // If second entry with this name
+        } else if (typeof query_string[pair[0]] === "string") {
+          var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+          query_string[pair[0]] = arr;
+            // If third or later entry with this name
+        } else {
+          query_string[pair[0]].push(decodeURIComponent(pair[1]));
+        }
+      } 
+        return query_string;
+    }    
 
     function loadScript(url, callback)
     {

@@ -541,6 +541,23 @@ nav a:hover{
 }
 /*end section prices*/
 
+/*start section order*/
+#sectionorder{
+	width:100%;
+	float:left;
+	background-image:url(../img/patterns/green-bg.png);
+	background-repeat:repeat;
+	background-attachment:fixed;		
+}
+#sectionorder .titlesection{
+	text-shadow: 3px 3px 0 rgba(190, 115, 135, 0.9);
+	background-image:url(../img/divider/skills.png);
+}
+#sectionorder .titlesection h1{
+	color:#FFF;
+}
+/*end section order*/
+
 /*start section team*/
 #sectionteam{
 	width:100%;
@@ -715,7 +732,6 @@ nav a:hover{
 }
 /*end oursocial*/
 
-
 /*start contacts*/
 #contacts{
 	width:100%;
@@ -858,7 +874,7 @@ nav a:hover{
 .hidden{
 	display: none;
 }
-#oursocial .titlesection, #services .titlesection, #sectionportfolio .titlesection, #sectionprices .titlesection, #sectionteam .titlesection, #sectionskills .titlesection{
+#oursocial .titlesection, #services .titlesection, #sectionportfolio .titlesection, #sectionprices .titlesection, #sectionteam .titlesection, #sectionskills .titlesection, #sectionorder .titlesection{
 	background-repeat:no-repeat;
 	background-position:center bottom;
 	margin-bottom:20px;

@@ -75,7 +75,8 @@
   position: relative;
   /*background-color:#f5f5f5;*/
   /*border:1px solid #ededed;*/
-  display:block;
+  display:inline-block;
+  vertical-align:top;
 }
 .element .element-internal {
   height:290px;
