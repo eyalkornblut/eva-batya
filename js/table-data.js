@@ -12,6 +12,7 @@ jQuery(function($){
     var COL_TOP_FILTER      = "TopFilter";
     var COL_PRODUCT         = "Product";
     var COL_LEEDS_TO        = "LeedsTo";
+    var COL_ORDER_PRICE     = "OrderPrice";
 
     var DEFAULT_IMAGE_PATH_1 = "img/section-works/templates/template-1.png";
     var DEFAULT_IMAGE_PATH_2 = "img/section-works/templates/template-2.png";
